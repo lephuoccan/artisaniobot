@@ -5,6 +5,7 @@ import telebot
 import queue
 
 TOKEN = '6228427174:AAGnO6UxecRK_f1dcPmFn8QLDtLKaUDlez4'
+CHAT_ID_ping = '-1001936854118'
 CHAT_ID = '-1001936854118'
 # CHAT_ID = '-1001832667683'
 API_URL = 'https://collect.artisant.io/api/products'
@@ -30,6 +31,8 @@ def send_message():
         # Lấy dữ liệu từ hàng đợi
         data = message_queue.get()
         if len(data) > 0:
+            text = f"bot đang hoạt động"
+            bot.send_message(chat_id=CHAT_ID_ping, text=text)
             newData = data[0]
             if newData['id'] > preID:
                 for item in data:
