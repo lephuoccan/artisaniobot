@@ -6,8 +6,8 @@ import queue
 
 TOKEN = '6228427174:AAGnO6UxecRK_f1dcPmFn8QLDtLKaUDlez4'
 CHAT_ID_ping = '-1001936854118'
-CHAT_ID = '-1001936854118'
-# CHAT_ID = '-1001832667683'
+# CHAT_ID = '-1001936854118'
+CHAT_ID = '-1001832667683'
 API_URL = 'https://collect.artisant.io/api/products'
 
 bot = telebot.TeleBot(TOKEN)
@@ -25,7 +25,7 @@ def get_data():
             pass
 
 def send_message():
-    preID = 140
+    preID = 141
     count = 0
     while True:
         # Lấy dữ liệu từ hàng đợi
